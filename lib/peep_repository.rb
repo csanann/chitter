@@ -1,6 +1,6 @@
 #file: lib/peep_repository.rb
 
-require 'peep'
+require './lib/peep'
 
 class PeepRepository
   
