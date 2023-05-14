@@ -1,6 +1,6 @@
 #file: lib/user_repository.rb
 
-require 'user'
+require './lib/user'
 require 'bcrypt'
 
 
