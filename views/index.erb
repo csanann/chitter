@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chitter - Homepage</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
+<html>
+<head></head>
 <body>
     <h1>Welcome to the Chitter Society!</h1>
     <% @peeps_list.reverse_each do |peep| %>
-        <%= user = user_repo.find(peep.user_id) %> 
-        <p><%= user.name %> @<%= user.username %> - <%= peep.timestamp %></p>
+        <p><%= @users.find(peeps.user_id) %> @<%= @users.find(peeps.user_id).username %> - <%= peep.timestamp %></p>
         <p><a href="/peeps/<%=peep.id%>"><%= peep.message %></a></p>
         <br />
     <% end %>
