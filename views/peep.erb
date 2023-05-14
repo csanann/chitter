@@ -1,7 +1,9 @@
 <html>
   <head></head>
   <body>
-    <h1>Your peep has been posted!</h1>
+    <h1>Peep from: <%= @name %> (@<%= @username %>)</h1>
+    <p><%= @message %></p>
+    <p><%= @timestamp %></p>
     <p><a href="/">Back to home</a></p>
   </body>
 </html>
