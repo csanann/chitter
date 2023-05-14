@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitter - Homepage</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Welcome to the Chitter Society!</h1>
+    <% @peeps_list.reverse_each do |peep| %>
+        <%= user = user_repo.find(peep.user_id) %> 
+        <p><%= user.name %> @<%= user.username %> - <%= peep.timestamp %></p>
+        <p><a href="/peeps/<%=peep.id%>"><%= peep.message %></a></p>
+        <br />
+    <% end %>
+    <% if @user.nil? %>
+        <p><a href="/signup"> <button type="button">Sign up to Chitter</button></a><a href="/login"> <button type="button">Log in to Chitter</button></a></p>
+    <% else %>
+        <p><a href="/peeps/new"><button type="button">Add a new peep</button></a><a href="/logout"> <button type="button">Log out</button></a></p>
+    <% end %>
+</body>
+</html>
