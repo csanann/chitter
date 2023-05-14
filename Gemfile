@@ -6,6 +6,7 @@ source "https://rubygems.org"
 gem "pg"
 gem 'rspec'
 gem "bcrypt"
+#gem "cypybara"
 gem "sinatra", "~> 3.0"
 gem "sinatra-contrib", "~> 3.0"
 gem "webrick", "~> 1.8"
