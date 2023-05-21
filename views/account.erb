@@ -1,3 +1,4 @@
+<!--Account page for logged in user, in progress, add links-->
 <html>
   <head></head>
   <body>
@@ -6,3 +7,9 @@
     <p><a href="/logout">Log out</a></p>
   </body>
 </html>
+
+
+<% @peeps_list.reverse_each do |peep| %>
+        <p><%= @users.find(peeps.user_id) %> @<%= @users.find(peeps.user_id).username %> - <%= peep.timestamp %></p>
+        <p><a href="/peeps/<%=peep.id%>"><%= peep.message %></a></p>
+        

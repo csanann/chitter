@@ -1,0 +1,30 @@
+<!--View all peeps-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peep Stream</title>
+  </head>
+  <body>
+    <h1>Public Peep Stream</h1>
+    <% @peeps.each do |peep| %>
+      <div class="peep">
+        <h2><%= peep.user.username %></h2>
+        <p><%= peep.content %></p>
+        <p><%= peep.timestamp %></p>
+      </div>
+    <% end %>
+    <br>
+    <p><a href="/index">Homepage</a></p>
+    <br>
+    <p><a href= "/about"> About Chitter</a></p>
+    <br>
+    <p><a href= "/peep"> To peep</a></p>
+    <br>
+    <p><a href= "/account"> Your account</a></p>
+    <br>
+    <p><a href= "/logout"> Log out</a></p>
+    <br>
+    <!-- links, home, logout, about, create a peep, account-->
+    <br/>
+  </body>
+</html>

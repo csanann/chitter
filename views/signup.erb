@@ -1,0 +1,32 @@
+<!-- signup page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chitter - Sign Up</title><!-- to fix, not shown-->
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Sign up to Chitter</h1> <!-- css wt,ht, -->
+    <p>This page wil contain a form for users to signup.</p>
+    <li>
+    <form method="POST" action="/signup">
+        <p><label>Name:        </label> <input type="text" name="name" required placeholder="Enter your full name:           "></p>
+        <p><label>Username:    </label> <input type="text" name="username" required placeholder="Enter your username:        "></p>
+        <p><label>Email:       </label> <input type="email" name="email" required placeholder="Enter your email address:     "></p>
+        <p><label>Password:    </label> <input type="password" name="password" required placeholder="Enter your password:    "></p>
+        </br>
+        <p><input type="submit" value="Sign up"/></p>
+    </form>
+    </li>
+    <br>
+    <br>
+    <!-- Button to return to home page -->
+    <form action="/index" method="get">
+        <button type="submit">Homepage</button>
+    </form>
+    <br>
+    <br>
+</body>
+</html>

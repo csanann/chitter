@@ -1,16 +1,33 @@
-<html>
-<head></head>
-<body>
-    <h1>Welcome to the Chitter Society!</h1>
-    <% @peeps_list.reverse_each do |peep| %>
-        <p><%= @users.find(peeps.user_id) %> @<%= @users.find(peeps.user_id).username %> - <%= peep.timestamp %></p>
-        <p><a href="/peeps/<%=peep.id%>"><%= peep.message %></a></p>
-        <br />
-    <% end %>
-    <% if @user.nil? %>
-        <p><a href="/signup"> <button type="button">Sign up to Chitter</button></a><a href="/login"> <button type="button">Log in to Chitter</button></a></p>
-    <% else %>
-        <p><a href="/peeps/new"><button type="button">Add a new peep</button></a><a href="/logout"> <button type="button">Log out</button></a></p>
-    <% end %>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chitter - Home</title><!-- to fix, not shown-->
+  <link rel="stylesheet" href="/styles.css">
+
+      <title>Welcome to the Chitter Society!</title>
+    <!--<h1>Welcome to the Chitter Society!</h1>-->  
+</head>
+
+    <body>
+      <p><h1>This is Chitter Homepage.</h1></p>
+      <br>
+    <!-- Button back to Sign up page -->
+    <form action="/signup"" method="get">
+        <button type="submit">Sign up to Chitter</button>
+    </form>
+    <br>
+    <!-- Button back to Log in page -->
+    <form action="/login"" method="get">
+        <button type="submit">Log in to Chitter</button>
+    </form>
+    <br>
+    <!-- Button back to About Chitter page -->
+    <form action="/about"" method="get">
+        <button type="submit">About Chitter</button>
+    </form>
+    <br>
+    <br/>
+    </body>
 </html>

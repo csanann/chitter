@@ -4,7 +4,7 @@ require 'simplecov-console'
 require_relative '../lib/database_connection'
 
 ENV['ENV'] = 'test'
-DatabaseConnection.connect
+DatabaseConnection.connect#('chitter_test')
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -30,7 +30,7 @@ RSpec.configure do |config|
 end
 
 def reset_all_tables
-  seed_sql = File.read('tables_seeds.sql')
-  connection = PG.connect({ host: '127.0.0.1', dbname: 'chitter' })
+  seed_sql = File.read('insert_data.sql')
+  connection = PG.connect({ host: '127.0.0.1', dbname: 'chitter_test' })
   connection.exec(seed_sql)
 end
